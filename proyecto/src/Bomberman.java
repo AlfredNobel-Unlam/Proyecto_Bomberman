@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Bomberman extends ObjetoEnMapa{
+public class Bomberman{
 
 	private User jugador;
 	private int limiteCantBomba;
@@ -8,13 +8,16 @@ public class Bomberman extends ObjetoEnMapa{
 	private Mapa map;
 	private boolean vivo;
 	private Partida part;
+	double posX;
+	double posY;
 
 	public Mapa getMapa(){
 		return map;
 	}
 	/*modificacion de priueba**/
-	public Bomberman(User usr, int posX, int posY, Mapa map) {
-		super(posX, posY);
+	public Bomberman(User usr, double posX, double posY, Mapa map) {
+		this.posX=posX;
+		this.posY=posY;
 		this.jugador = usr;
 		this.limiteCantBomba = 1;
 		this.cantActBombas = 0;
@@ -23,9 +26,10 @@ public class Bomberman extends ObjetoEnMapa{
 	}
 
 
-	public Bomberman(int posX, int posY, Mapa mapa1) {
+	public Bomberman(double posX, double posY, Mapa mapa1) {
 		// TODO Auto-generated constructor stub
-		super(posX, posY);
+		this.posX=posX;
+		this.posY=posY;
 		this.limiteCantBomba = 1;
 		this.cantActBombas = 0;
 		this.map = mapa1;
@@ -81,11 +85,11 @@ public class Bomberman extends ObjetoEnMapa{
 	public void sumarPunto(){
 		this.part.sumarPuntoAJugador(this.jugador);
 	}
-	public int getPosXEnMapa() {
+	public double getPosXEnMapa() {
 		// TODO Auto-generated method stub
 		return posX;
 	}
-	public int getPosYEnMapa() {
+	public double getPosYEnMapa() {
 		// TODO Auto-generated method stub
 		return posY;
 	}
