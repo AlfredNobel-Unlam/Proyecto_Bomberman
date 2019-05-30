@@ -7,4 +7,8 @@ public class ObjetoEnMapa {
 		this.posX = posX;
 		this.posY = posY;
 	}
+	
+	public String toString() {
+		return "[0]";
+	}
 }

@@ -8,5 +8,11 @@ public class Obstaculo extends ObjetoEnMapa{
     	super(posX, posY);
     	this.destructible = destructible;
     }
+    
+    @Override
+	public String toString() {
+		return "[" + (destructible?"D":"I") + "]";
+	}
+
 
 }
